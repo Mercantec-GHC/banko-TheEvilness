@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banko", "Banko\Banko.csproj", "{52C1B322-9B61-4364-B2BB-1D6D045DB951}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banko", "Banko\Banko.csproj", "{52C1B322-9B61-4364-B2BB-1D6D045DB951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankoBlazor", "BankoBlazor\BankoBlazor.csproj", "{E3E199E7-8DFF-4FAD-81A7-BCE23F7C2153}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{52C1B322-9B61-4364-B2BB-1D6D045DB951}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C1B322-9B61-4364-B2BB-1D6D045DB951}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C1B322-9B61-4364-B2BB-1D6D045DB951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E199E7-8DFF-4FAD-81A7-BCE23F7C2153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E199E7-8DFF-4FAD-81A7-BCE23F7C2153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E199E7-8DFF-4FAD-81A7-BCE23F7C2153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E199E7-8DFF-4FAD-81A7-BCE23F7C2153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

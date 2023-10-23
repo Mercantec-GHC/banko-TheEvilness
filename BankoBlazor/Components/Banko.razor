@@ -1,0 +1,18 @@
+﻿@page "/banko"
+@using global::Banko.Models;
+@using global::Banko.Shared;
+<h3>Banko</h3>
+
+@code {
+
+	List<BankoPlate> Plates { get; set; }
+	/// <summary>
+	/// The very first function that is run upon loading a component, basically Page_Load from Webforms.
+	/// </summary>
+	/// <returns></returns>
+	protected override async Task OnInitializedAsync()
+	{
+		Plates = PlateGenerator.GeneratePlates(5);
+		Console.WriteLine();
+	}
+}

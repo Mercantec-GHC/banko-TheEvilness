@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\BankoBlazor.csproj": {}
+  },
+  "projects": {
+    "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\BankoBlazor.csproj": {
+      "version": "1.3.0",
+      "restore": {
+        "projectUniqueName": "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\BankoBlazor.csproj",
+        "projectName": "BankoBlazor",
+        "projectPath": "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\BankoBlazor.csproj",
+        "packagesPath": "C:\\Users\\AlexPedersen\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AlexPedersen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj": {
+                "projectPath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Blazorise": {
+              "target": "Package",
+              "version": "[1.3.*, )"
+            },
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[1.3.*, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[1.3.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj",
+        "projectName": "Banko",
+        "projectPath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj",
+        "packagesPath": "C:\\Users\\AlexPedersen\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AlexPedersen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

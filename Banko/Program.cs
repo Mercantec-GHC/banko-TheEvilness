@@ -1,4 +1,5 @@
 ﻿using Banko.Models;
+using Banko.Shared;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.ExceptionServices;
@@ -15,7 +16,7 @@ namespace Banko
 			Plates = new List<BankoPlate>();
 			OneRowWon = false;
 			TwoRowsWon = false;
-			GeneratePlates();
+			Plates = PlateGenerator.GeneratePlates(5);
 			StartLoop();
 		}
 
@@ -96,95 +97,7 @@ namespace Banko
 				Console.Write("\n\\============================================/\n\n");
 			}
 		}
-		/// <summary>
-		/// This generates plates to be processed in the game.
-		/// </summary>
-		private static void GeneratePlates()
-		{
-			for (int plateCount = 0; plateCount < 5; plateCount++)
-			{
-				List<int?[]> columnData = GenerateColumnData();
 
-				List<RowValue[]> rowValues = new List<RowValue[]>();
-				for (int i = 0; i < 3; i++)
-				{
-					rowValues.Add(new RowValue[9]);
-				}
-				for (int i = 0; i < columnData.Count; i++)
-				{
-					for (int j = 0; j < columnData[i].Length; j++)
-					{
-						rowValues[j][i] = new RowValue(columnData[i][j]);
-					}
-				}
-				Row[] rows = new Row[3];
-				for (int i = 0; i < 3; i++)
-				{
-					rows[i] = new Row(i + 1, rowValues[i]);
-				}
-				Plates.Add(new BankoPlate(plateCount + 1, rows));
-			}
-			CleanupRows();
-		}
-		/// <summary>
-		/// This generates data for each Column for each plate and populates them.
-		/// </summary>
-		/// <returns></returns>
-		private static List<int?[]> GenerateColumnData()
-		{
-			List<int?[]> columnData = new List<int?[]>();
-			Random random = new Random();
-			int randomMin = 1;
-			int randomMax = 9;
-			for (int i = 0; i < 9; i++)
-			{
-				List<int?> numbersAdded = new List<int?>();
-				for (int j = 0; j < 3; j++)
-				{
-					while (true)
-					{
-						int result = random.Next(randomMin, randomMax);
-						if (!numbersAdded.Contains(result))
-						{
-							numbersAdded.Add(result);
-							break;
-						}
-					}
-				}
-				if (i == 0)
-				{
-					//If this is the first run, we reset the min and max variables, to make it easier to increment for the 8 other columns.
-					randomMin = 0;
-					randomMax = 9;
-				}
-				randomMin += 10;
-				randomMax += 10;
-				numbersAdded.Sort();
-				int?[] array = numbersAdded.ToArray();
-				columnData.Add(array);
-			}
-			return columnData;
-		}
-		/// <summary>
-		/// This removes, at random, numbers from each row until each row only has 5 numbers, as per the rules.
-		/// </summary>
-		private static void CleanupRows()
-		{
-			foreach (BankoPlate plate in Plates)
-			{
-				foreach (Row row in plate.Rows)
-				{
-					Random random = new Random();
-					int numbers = 9;
-					while (numbers > 5)
-					{
-						int result = random.Next(0, 9);
-						row.Values[result].Number = null;
-						numbers = row.Values.Count(x => x.Number != null);
-					}
-				}
-			}
-		}
 		/// <summary>
 		/// This processes the input and marks numbers based on it.
 		/// Also triggers different win states after numbers are marked.

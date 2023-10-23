@@ -8,12 +8,12 @@ namespace Banko.Models
 {
 	public class BankoPlate
 	{
-		public BankoPlate(int id, Row[] rows)
+		public BankoPlate(string id, Row[] rows)
 		{
 			Id = id;
 			Rows = rows;
 		}
-		public int Id { get; set; }
+		public string Id { get; set; }
 		public Row[] Rows { get; set; }
 	}
 }
