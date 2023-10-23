@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AlexPedersen\\source\\repos\\Banko\\Banko\\Banko.csproj": {}
+    "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AlexPedersen\\source\\repos\\Banko\\Banko\\Banko.csproj": {
+    "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AlexPedersen\\source\\repos\\Banko\\Banko\\Banko.csproj",
+        "projectUniqueName": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj",
         "projectName": "Banko",
-        "projectPath": "C:\\Users\\AlexPedersen\\source\\repos\\Banko\\Banko\\Banko.csproj",
+        "projectPath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj",
         "packagesPath": "C:\\Users\\AlexPedersen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AlexPedersen\\source\\repos\\Banko\\Banko\\obj\\",
+        "outputPath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AlexPedersen\\AppData\\Roaming\\NuGet\\NuGet.Config",

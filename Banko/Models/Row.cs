@@ -8,10 +8,14 @@ namespace Banko.Models
 {
 	public class Row
 	{
-		public Row(RowValue[] values)
+		public Row(int id, RowValue[] values)
 		{
+			Id = id;
 			Values = values;
+			Won = false;
 		}
+		public int Id { get; set; }
 		public RowValue[] Values { get; set; }
+		public bool Won { get; set; }
 	}
 }
