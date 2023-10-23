@@ -7,10 +7,14 @@ namespace Banko
 {
 	internal class Program
 	{
-		public static List<BankoPlate> Plates { get; set; }
+		static List<BankoPlate> Plates { get; set; }
+		static bool OneRowWon { get; set; }
+		static bool TwoRowsWon { get; set; }
 		static void Main(string[] args)
 		{
 			Plates = new List<BankoPlate>();
+			OneRowWon = false;
+			TwoRowsWon = false;
 			GeneratePlates();
 			StartLoop();
 		}
@@ -203,11 +207,19 @@ namespace Banko
 						if (row.Values.Count(x => x.Marked == true) == 5)
 						{
 							row.Won = true;
-							Console.WriteLine($"You have won a row on Plate {plate.Id}, Row {row.Id} !");
+							int rowsWon = plate.Rows.Count(x => x.Won);
 							somethingWon = true;
-							if (plate.Rows.Count(x => x.Won) == 3)
+							switch (rowsWon)
 							{
-								Console.WriteLine($"You have won on Plate {plate.Id} !");
+								case 1:
+									Console.WriteLine($"You have won a row on Plate {plate.Id}, Row {row.Id} !");
+									break;
+								case 2:
+									Console.WriteLine($"You have won two rows on Plate {plate.Id} !");
+									break;
+								case 3:
+									Console.WriteLine($"You have won on Plate {plate.Id} !");
+									break;
 							}
 						}
 					}
