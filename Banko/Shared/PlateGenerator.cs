@@ -72,6 +72,11 @@ namespace Banko.Shared
 					randomMin = 0;
 					randomMax = 9;
 				}
+				if (i == 7)
+				{
+					//To make sure that 90 is possible in the last column.
+					randomMax = 80;
+				}
 				randomMin += 10;
 				randomMax += 10;
 				numbersAdded.Sort();
