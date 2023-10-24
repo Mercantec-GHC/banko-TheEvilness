@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fTpj5aKNETvM8xkEkowcGV88F+VK0jegyawNALxn93zvH6xakOxptRPXyq0GifWoDjnvmbxB3vQlXJ4gT4aKHw==",
+  "dgSpecHash": "9cbtZ4RMrbEkvvhagBYsia4pUbrWav+yQjVP23iFkSwb5NIMBksTn892or6ej5GxdFzxyO+Bpn7FbhaW7ndmNw==",
   "success": true,
   "projectFilePath": "C:\\git\\GitHub\\banko-TheEvilness\\Banko\\Banko.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AlexPedersen\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

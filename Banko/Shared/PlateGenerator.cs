@@ -1,9 +1,12 @@
-﻿using Banko.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Banko.Shared.Models;
+using CsvHelper;
+using CsvHelper.Configuration;
 
 namespace Banko.Shared
 {
@@ -42,7 +45,7 @@ namespace Banko.Shared
 			return plates;
 		}
 		/// <summary>
-		/// This generates data for each Column for each plate and populates them.
+		/// This generates data for each Column for each plate and returns it.
 		/// </summary>
 		/// <returns></returns>
 		private static List<int?[]> GenerateColumnData()
@@ -104,6 +107,44 @@ namespace Banko.Shared
 					}
 				}
 			}
+		}
+
+		public static List<BankoPlate> ImportByCSV()
+		{
+			List<BankoPlate> plates = new List<BankoPlate>();
+			CsvConfiguration csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false };
+			string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Csv");
+			foreach (string file in files)
+			{
+				List<CsvRow> csvRows = new List<CsvRow>();
+				using (var reader = new StreamReader(file))
+				using (var csv = new CsvReader(reader, csvConfiguration))
+				{
+					csvRows = csv.GetRecords<CsvRow>().ToList();
+				}
+				plates.Add(GeneratePlateFromFile(Path.GetFileNameWithoutExtension(file), csvRows));
+			}
+			return plates;
+		}
+
+		private static BankoPlate GeneratePlateFromFile(string filename, List<CsvRow> csvRows)
+		{
+			Row[] rows = new Row[3];
+			for (int i = 0; i < csvRows.Count; i++)
+			{
+				RowValue[] rowValues = new RowValue[9];
+				rowValues[0] = new RowValue(csvRows[i].Column1);
+				rowValues[1] = new RowValue(csvRows[i].Column2);
+				rowValues[2] = new RowValue(csvRows[i].Column3);
+				rowValues[3] = new RowValue(csvRows[i].Column4);
+				rowValues[4] = new RowValue(csvRows[i].Column5);
+				rowValues[5] = new RowValue(csvRows[i].Column6);
+				rowValues[6] = new RowValue(csvRows[i].Column7);
+				rowValues[7] = new RowValue(csvRows[i].Column8);
+				rowValues[8] = new RowValue(csvRows[i].Column9);
+				rows[i] = new Row(i, rowValues);
+			}
+			return new BankoPlate(filename, rows);
 		}
 	}
 }

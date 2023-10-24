@@ -1,5 +1,5 @@
-﻿using Banko.Models;
-using Banko.Shared;
+﻿using Banko.Shared;
+using Banko.Shared.Models;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.ExceptionServices;
@@ -16,7 +16,8 @@ namespace Banko
 			Plates = new List<BankoPlate>();
 			OneRowWon = false;
 			TwoRowsWon = false;
-			Plates = PlateGenerator.GeneratePlates(5);
+			//Plates = PlateGenerator.GeneratePlates(5);
+			Plates = PlateGenerator.ImportByCSV();
 			StartLoop();
 		}
 

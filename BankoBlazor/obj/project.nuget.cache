@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lBdJaDHcnXRB9DsQKlASNIitGivXcYdegty5dxcGMhJwvSz++8JPyWw0mCrbfVXc2kHaP9I0IH/qHocWY8GEyQ==",
+  "dgSpecHash": "GOO1Z94rX88NBrrFlsYR8IGnitUSA+WI9iPFcs5hIZfID0hPatooQMxIQ/7yOOhGpr/8llDgsFlxm52kKxIieg==",
   "success": true,
   "projectFilePath": "C:\\git\\GitHub\\banko-TheEvilness\\BankoBlazor\\BankoBlazor.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\blazorise.bootstrap\\1.3.2\\blazorise.bootstrap.1.3.2.nupkg.sha512",
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\blazorise.icons.fontawesome\\1.3.2\\blazorise.icons.fontawesome.1.3.2.nupkg.sha512",
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\blazorise.licensing\\1.1.0\\blazorise.licensing.1.1.0.nupkg.sha512",
+    "C:\\Users\\AlexPedersen\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\deepcloner\\0.10.4\\deepcloner.0.10.4.nupkg.sha512",
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.23\\microsoft.aspnetcore.authorization.6.0.23.nupkg.sha512",
     "C:\\Users\\AlexPedersen\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.23\\microsoft.aspnetcore.components.6.0.23.nupkg.sha512",
