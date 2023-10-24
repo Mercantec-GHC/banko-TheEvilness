@@ -49,3 +49,4 @@ C:\git\GitHub\banko-TheEvilness\BankoBlazor\bin\Debug\net6.0\Banko.runtimeconfig
 C:\git\GitHub\banko-TheEvilness\BankoBlazor\bin\Debug\net6.0\Banko.exe
 C:\git\GitHub\banko-TheEvilness\BankoBlazor\bin\Debug\net6.0\Banko.dll
 C:\git\GitHub\banko-TheEvilness\BankoBlazor\bin\Debug\net6.0\Banko.pdb
+C:\git\GitHub\banko-TheEvilness\BankoBlazor\bin\Debug\net6.0\CsvHelper.dll

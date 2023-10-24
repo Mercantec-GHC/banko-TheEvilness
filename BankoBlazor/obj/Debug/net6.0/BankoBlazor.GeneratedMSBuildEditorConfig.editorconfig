@@ -24,16 +24,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCYW5rby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/git/GitHub/banko-TheEvilness/BankoBlazor/Components/Layout/FooterMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRm9vdGVyTWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/git/GitHub/banko-TheEvilness/BankoBlazor/Components/Layout/SideMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcU2lkZU1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/git/GitHub/banko-TheEvilness/BankoBlazor/Components/Layout/TopMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9wTWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/git/GitHub/banko-TheEvilness/BankoBlazor/Layouts/MainLayout.razor]

@@ -130,7 +130,7 @@ namespace Banko.Shared
 		private static BankoPlate GeneratePlateFromFile(string filename, List<CsvRow> csvRows)
 		{
 			Row[] rows = new Row[3];
-			for (int i = 0; i < csvRows.Count; i++)
+			for (int i = 0; i < 3; i++)
 			{
 				RowValue[] rowValues = new RowValue[9];
 				rowValues[0] = new RowValue(csvRows[i].Column1);
