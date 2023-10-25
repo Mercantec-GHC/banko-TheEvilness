@@ -4,39 +4,39 @@
 	@for (int i = 0; i < Plates.Count; i++)
 	{
 		BankoPlate plate = Plates[i];
-			<Card>
-				<CardBody>
-						<h4>Plate: @plate.Id</h4>
-					<Table Bordered>
-						<TableBody>
-							@for (int k = 0; k < 3; k++)
-							{
-								//We must do this, otherwise i becomes 3 (somehow), but if we assign it locally in scope it does not happen.
-								//Refere to this git issue for.. an explanation: https://github.com/dotnet/aspnetcore/issues/22302
-								int rowIndex = k;
-								<TableRow>
-									@for (int j = 0; j < plate.Rows[rowIndex].Values.Length; j++)
+		<Card>
+			<CardBody>
+				<h4>Plate: @plate.Id</h4>
+				<Table Bordered>
+					<TableBody>
+						@for (int k = 0; k < 3; k++)
+						{
+							//We must do this, otherwise k becomes 3 (somehow), but if we assign it locally in scope it does not happen.
+							//Refere to this git issue for.. an explanation: https://github.com/dotnet/aspnetcore/issues/22302
+							int rowIndex = k;
+							<TableRow>
+								@for (int j = 0; j < plate.Rows[rowIndex].Values.Length; j++)
+								{
+									int valueIndex = j;
+									Background background = Background.White;
+									RowValue rowValue = plate.Rows[rowIndex].Values[valueIndex];
+									string input = "";
+									if (rowValue.Number != null)
 									{
-										int valueIndex = j;
-										Background background = Background.White;
-										RowValue rowValue = plate.Rows[rowIndex].Values[valueIndex];
-										string input = "";
-										if (rowValue.Number != null)
+										input = rowValue.Number.ToString();
+										if (rowValue.Marked)
 										{
-											input = rowValue.Number.ToString();
-											if (rowValue.Marked)
-											{
-												background = Background.Success;
-											}
+											background = Background.Success;
 										}
-										<TableRowCell Background=background @onclick=@(async () => await MarkNumber(plate.Id, rowValue))>@input</TableRowCell>
 									}
-								</TableRow>
-							}
-						</TableBody>
-					</Table>
-				</CardBody>
-			</Card>
+									<TableRowCell Background=background @onclick=@(async () => await MarkNumber(plate.Id, rowValue))>@input</TableRowCell>
+								}
+							</TableRow>
+						}
+					</TableBody>
+				</Table>
+			</CardBody>
+		</Card>
 	}
 </Div>
 <Modal @ref="modalRef">

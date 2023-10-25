@@ -1,9 +1,5 @@
 ﻿using Banko.Shared;
 using Banko.Shared.Models;
-using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.ExceptionServices;
-
 namespace Banko
 {
     internal class Program
