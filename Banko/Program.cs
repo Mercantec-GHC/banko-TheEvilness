@@ -7,6 +7,7 @@ namespace Banko
         static List<BankoPlate> Plates { get; set; }
         static bool OneRowWon { get; set; }
         static bool TwoRowsWon { get; set; }
+
         static void Main(string[] args)
         {
             Plates = new List<BankoPlate>();
